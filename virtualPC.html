@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="application/javascript">
+    function $(elem) {
+        return document.getElementById(elem);
+    }
+    function changeDiv(newC, newAt, nac) {
+        var x = document.createElement("div");
+        x.setAttribute("id", "div");
+        if (newAt !== undefined && nac !== undefined) {
+            x.setAttribute(newAt, nac);
+        }
+        x.innerHTML = newC;
+        div.parentNode.replaceChild(x, div);
+        div = $("div");
+    }
+    </script> 
+    <style>
+        body {background-color:#1a1aff;}
+        #div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 30%;
+            width: 50%;
+            margin: -15% 0 0 -25%;
+        }
+    </style>
+    <title>A Virtual Computer</title>
+    
+</head>
+<body>
+<div id="ss">
+    <h1>My Virtual Pc</h1>
+    <img src="http://thumbs.dreamstime.com/t/closed-laptop-isolated-25105260.jpg" width="1000px" onclick="startComputer()"/>
+</div>
+<div id="div" style="display:none;" style="font-size:3em;">
+    <i>loading...</i>
+</div>
+</body>
+<script src="virtualPC.js"></script>
+</html>
